@@ -18,6 +18,7 @@ namespace SmartParking.Models
         public string Adresse { get => adresse; set => adresse = value; }
         public string Contact { get => contact; set => contact = value; }
 
+
         public Parking(int id, string name, string adresse, string contact)
         {
             this.id = id;

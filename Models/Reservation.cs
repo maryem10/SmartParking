@@ -26,6 +26,7 @@ namespace SmartParking.Models
         public DateTime DateEnreg { get => dateEnreg; set => dateEnreg = value; }
         public int OwenerCin { get => owenerCin; set => owenerCin = value; }
 
+
         public Reservation(string matricule, string ownername, string model, int type, double prix, DateTime dateEnreg, int owenerCin)
         {
             this.matricule = matricule;
