@@ -108,14 +108,7 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="DataBase\" />
-<<<<<<< HEAD
     <Folder Include="Models\" />
-    <Folder Include="Views\" />
-=======
-
-    <Folder Include="Models\" />
-
->>>>>>> f9c8d557fcd2b75aba55801e3b2bee47ac16f135
     <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
