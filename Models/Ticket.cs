@@ -20,7 +20,6 @@ namespace SmartParking.Models
         internal Reservation IdRes { get => idRes; set => idRes = value; }
         internal User IdUser { get => idUser; set => idUser = value; }
 
-
         public Ticket(int id, Reservation idRes, User idUser, DateTime dateEmp, double total)
         {
             this.id = id;

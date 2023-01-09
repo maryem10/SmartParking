@@ -18,7 +18,6 @@ namespace SmartParking.Models
         public int Status { get => status; set => status = value; }
         public string Type { get => type; set => type = value; }
 
-
         public Place(int id, string code, int status, string type)
         {
             this.id = id;
