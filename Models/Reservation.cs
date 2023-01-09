@@ -9,7 +9,6 @@ namespace SmartParking.Models
     class Reservation
     {
         private int id;
-        private int iid;
         private string matricule;
         private string ownername;
         private string model;
