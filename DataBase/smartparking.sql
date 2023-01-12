@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 08 jan. 2023 à 19:35
--- Version du serveur : 10.4.24-MariaDB
--- Version de PHP : 8.0.19
+-- Généré le : lun. 09 jan. 2023 à 09:25
+-- Version du serveur :  10.4.18-MariaDB
+-- Version de PHP : 7.4.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -55,6 +55,7 @@ CREATE TABLE `place` (
 
 CREATE TABLE `reservation` (
   `id` int(11) NOT NULL,
+  `placeId` int(11) NOT NULL,
   `matricule` varchar(25) NOT NULL,
   `ownername` varchar(25) NOT NULL,
   `model` varchar(25) NOT NULL,
@@ -72,7 +73,7 @@ CREATE TABLE `reservation` (
 
 CREATE TABLE `ticket` (
   `id` int(11) NOT NULL,
-  `idOwner` int(11) NOT NULL,
+  `idRes` int(11) NOT NULL,
   `idUser` int(11) NOT NULL,
   `dateEmp` date NOT NULL,
   `total` double NOT NULL
@@ -111,10 +112,19 @@ ALTER TABLE `place`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `reservation`
+--
+ALTER TABLE `reservation`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `placeId` (`placeId`);
+
+--
 -- Index pour la table `ticket`
 --
 ALTER TABLE `ticket`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idRes` (`idRes`),
+  ADD KEY `idUser` (`idUser`);
 
 --
 -- Index pour la table `user`
@@ -139,6 +149,12 @@ ALTER TABLE `place`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT pour la table `reservation`
+--
+ALTER TABLE `reservation`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT pour la table `ticket`
 --
 ALTER TABLE `ticket`
@@ -149,6 +165,23 @@ ALTER TABLE `ticket`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `reservation`
+--
+ALTER TABLE `reservation`
+  ADD CONSTRAINT `reservation_ibfk_1` FOREIGN KEY (`placeId`) REFERENCES `place` (`id`);
+
+--
+-- Contraintes pour la table `ticket`
+--
+ALTER TABLE `ticket`
+  ADD CONSTRAINT `ticket_ibfk_1` FOREIGN KEY (`idRes`) REFERENCES `reservation` (`id`),
+  ADD CONSTRAINT `ticket_ibfk_2` FOREIGN KEY (`idUser`) REFERENCES `user` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
