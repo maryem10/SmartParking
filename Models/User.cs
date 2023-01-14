@@ -44,5 +44,9 @@ namespace SmartParking.Models
             this.prenom = prenom;
             this.cin = cin;
         }
+
+        public User()
+        {
+        }
     }
 }

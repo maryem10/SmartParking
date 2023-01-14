@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using UI_UX_Dashboard_P1;
 
 namespace SmartParking
 {
@@ -18,9 +19,10 @@ namespace SmartParking
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new authentification());
 
         }
+        //public static MySqlConnection cnx = new MySqlConnection("SERVER=127.0.0.1; DATABASE=smartparking; UID=root; PASSWORD= ;  pooling = false; convert zero datetime=True");
         public static MySqlConnection GetConnection()
         {
             string sql = "datasource=localhost;port=3306;username=root;password=;database=smartparking";
@@ -36,5 +38,6 @@ namespace SmartParking
             }
             return cnn;
         }
+
     }
 }
