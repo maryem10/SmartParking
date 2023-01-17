@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Home));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.button20 = new System.Windows.Forms.Button();
@@ -51,7 +55,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
@@ -75,6 +79,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.bunifuBarChart1 = new Bunifu.Charts.WinForms.ChartTypes.BunifuBarChart(this.components);
             this.panel1.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -84,7 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -384,7 +389,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel8.Controls.Add(this.pictureBox13);
+            this.panel8.Controls.Add(this.chart1);
             this.panel8.Controls.Add(this.label17);
             this.panel8.Controls.Add(this.label16);
             this.panel8.Controls.Add(this.pictureBox12);
@@ -394,17 +399,23 @@
             this.panel8.Size = new System.Drawing.Size(697, 559);
             this.panel8.TabIndex = 23;
             // 
-            // pictureBox13
+            // chart1
             // 
-            this.pictureBox13.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(0, 138);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(697, 421);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 10;
-            this.pictureBox13.TabStop = false;
+            this.chart1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "NB_Res";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(12, 135);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
+            series1.ChartArea = "NB_Res";
+            series1.Legend = "Legend1";
+            series1.Name = "NB_Res";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(624, 384);
+            this.chart1.TabIndex = 10;
+            this.chart1.Text = "chart1";
             // 
             // label17
             // 
@@ -476,6 +487,7 @@
             this.label13.Size = new System.Drawing.Size(87, 20);
             this.label13.TabIndex = 5;
             this.label13.Text = "5 New Alert";
+            this.label13.Visible = false;
             // 
             // label14
             // 
@@ -485,9 +497,9 @@
             this.label14.Location = new System.Drawing.Point(4, 36);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 57);
+            this.label14.Size = new System.Drawing.Size(49, 57);
             this.label14.TabIndex = 4;
-            this.label14.Text = "58";
+            this.label14.Text = "0";
             // 
             // label15
             // 
@@ -497,9 +509,9 @@
             this.label15.Location = new System.Drawing.Point(19, 17);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(50, 20);
+            this.label15.Size = new System.Drawing.Size(110, 20);
             this.label15.TabIndex = 0;
-            this.label15.Text = "ALERT";
+            this.label15.Text = "Profit for today";
             // 
             // panel6
             // 
@@ -536,6 +548,7 @@
             this.label10.Size = new System.Drawing.Size(98, 20);
             this.label10.TabIndex = 5;
             this.label10.Text = "25 New Users";
+            this.label10.Visible = false;
             // 
             // label11
             // 
@@ -545,9 +558,9 @@
             this.label11.Location = new System.Drawing.Point(4, 36);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(97, 57);
+            this.label11.Size = new System.Drawing.Size(49, 57);
             this.label11.TabIndex = 4;
-            this.label11.Text = "120";
+            this.label11.Text = "0";
             // 
             // label12
             // 
@@ -557,9 +570,9 @@
             this.label12.Location = new System.Drawing.Point(19, 17);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 20);
+            this.label12.Size = new System.Drawing.Size(119, 20);
             this.label12.TabIndex = 0;
-            this.label12.Text = "USERS";
+            this.label12.Text = "Tickets for today";
             // 
             // panel5
             // 
@@ -596,6 +609,7 @@
             this.label7.Size = new System.Drawing.Size(124, 20);
             this.label7.TabIndex = 5;
             this.label7.Text = "Bounce Rate 25%";
+            this.label7.Visible = false;
             // 
             // label8
             // 
@@ -605,9 +619,9 @@
             this.label8.Location = new System.Drawing.Point(4, 36);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 57);
+            this.label8.Size = new System.Drawing.Size(49, 57);
             this.label8.TabIndex = 4;
-            this.label8.Text = "250";
+            this.label8.Text = "0";
             // 
             // label9
             // 
@@ -617,9 +631,9 @@
             this.label9.Location = new System.Drawing.Point(19, 17);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(69, 20);
+            this.label9.Size = new System.Drawing.Size(112, 20);
             this.label9.TabIndex = 0;
-            this.label9.Text = "VISITORS";
+            this.label9.Text = "Client for today";
             // 
             // panel4
             // 
@@ -656,6 +670,7 @@
             this.label6.Size = new System.Drawing.Size(107, 20);
             this.label6.TabIndex = 5;
             this.label6.Text = "15 New Orders";
+            this.label6.Visible = false;
             // 
             // label5
             // 
@@ -665,9 +680,9 @@
             this.label5.Location = new System.Drawing.Point(4, 36);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(132, 57);
+            this.label5.Size = new System.Drawing.Size(49, 57);
             this.label5.TabIndex = 4;
-            this.label5.Text = "1,587";
+            this.label5.Text = "0";
             // 
             // label4
             // 
@@ -677,9 +692,22 @@
             this.label4.Location = new System.Drawing.Point(19, 17);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 20);
+            this.label4.Size = new System.Drawing.Size(96, 20);
             this.label4.TabIndex = 0;
-            this.label4.Text = "ORDERS";
+            this.label4.Text = "Place Current";
+            // 
+            // bunifuBarChart1
+            // 
+            this.bunifuBarChart1.BackgroundColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("bunifuBarChart1.BackgroundColor")));
+            this.bunifuBarChart1.BorderColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("bunifuBarChart1.BorderColor")));
+            this.bunifuBarChart1.BorderSkipped = null;
+            this.bunifuBarChart1.BorderWidth = 0;
+            this.bunifuBarChart1.Data = ((System.Collections.Generic.List<double>)(resources.GetObject("bunifuBarChart1.Data")));
+            this.bunifuBarChart1.HoverBackgroundColor = System.Drawing.Color.Empty;
+            this.bunifuBarChart1.HoverBorderColor = System.Drawing.Color.Empty;
+            this.bunifuBarChart1.HoverBorderWidth = 0;
+            this.bunifuBarChart1.Label = "Label here";
+            this.bunifuBarChart1.TargetCanvas = null;
             // 
             // UC_Home
             // 
@@ -701,7 +729,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -743,7 +771,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox12;
@@ -767,5 +794,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private Bunifu.Charts.WinForms.ChartTypes.BunifuBarChart bunifuBarChart1;
     }
 }
