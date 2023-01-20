@@ -1,5 +1,4 @@
 ﻿using MySqlConnector;
-using SmartHome;
 using SmartParking.Models;
 using System;
 using System.Collections.Generic;
@@ -22,7 +21,22 @@ namespace SmartParking
             label4.Hide();
         }
 
-        public static MySqlConnection con = Program.GetConnection();
+        public static MySqlConnection GetConnection()
+        {
+            string sql = "datasource=localhost;port=3306;username=root;password=;database=smartparking";
+            MySqlConnection cnn = new MySqlConnection(sql);
+
+            try
+            {
+                cnn.Open();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Can not open connection ! \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return cnn;
+
+        }
         private void guna2PictureBox2_Click(object sender, EventArgs e)
         {
 
@@ -30,11 +44,11 @@ namespace SmartParking
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
+            MySqlConnection cnn = GetConnection();
 
             try
             {
-                if (con.State != ConnectionState.Open) { con.Open(); }
+                if (cnn.State != ConnectionState.Open) { cnn.Open(); }
                 User us = new User();
                 us.Username = textBox1_name.Text;
                 us.Username = textBox_pswd.Text;
@@ -64,7 +78,7 @@ namespace SmartParking
                     textBox1_name.Clear();
                     textBox_pswd.Clear();
                     MessageBox.Show("Merhba !!");
-                    UserV ff = new UserV();
+                    Dashboard ff = new Dashboard();
                     ff.Show();
                     label1.Show();
                     label4.Hide();

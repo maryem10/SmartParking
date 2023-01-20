@@ -9,25 +9,32 @@ namespace SmartParking.Models
     class Reservation
     {
         private int id;
+        private Place placeId;
         private string matricule;
         private string ownername;
         private string model;
-        private int type;
-        private double prix;
+        private string type;
+        private string prix;
         private DateTime dateEnreg;
-        private int owenerCin;
+        private string owenerCin;
+        private int status;
+
+        public Reservation()
+        {
+        }
 
         public int Id { get => id; set => id = value; }
         public string Matricule { get => matricule; set => matricule = value; }
         public string Ownername { get => ownername; set => ownername = value; }
         public string Model { get => model; set => model = value; }
-        public int Type { get => type; set => type = value; }
-        public double Prix { get => prix; set => prix = value; }
+        public string Type { get => type; set => type = value; }
+        public string Prix { get => prix; set => prix = value; }
         public DateTime DateEnreg { get => dateEnreg; set => dateEnreg = value; }
-        public int OwenerCin { get => owenerCin; set => owenerCin = value; }
+        public string OwenerCin { get => owenerCin; set => owenerCin = value; }
+        internal Place PlaceId { get => placeId; set => placeId = value; }
+        public int Status { get => status; set => status = value; }
 
-
-        public Reservation(string matricule, string ownername, string model, int type, double prix, DateTime dateEnreg, int owenerCin)
+        public Reservation(string matricule, string ownername, string model, string type, string prix, DateTime dateEnreg, string owenerCin, Place placeId, int status)
         {
             this.matricule = matricule;
             this.ownername = ownername;
@@ -36,11 +43,19 @@ namespace SmartParking.Models
             this.prix = prix;
             this.dateEnreg = dateEnreg;
             this.owenerCin = owenerCin;
+            this.placeId = placeId;
+            this.status = status;
         }
 
-        public Reservation(int id, string matricule, string ownername, string model, int type, double prix, DateTime dateEnreg, int owenerCin)
+        public Reservation(int id)
         {
             this.id = id;
+        }
+
+        public Reservation(int id, Place placeId, string matricule, string ownername, string model, string type, string prix, DateTime dateEnreg, string owenerCin, int status)
+        {
+            this.id = id;
+            this.placeId = placeId;
             this.matricule = matricule;
             this.ownername = ownername;
             this.model = model;
@@ -48,6 +63,7 @@ namespace SmartParking.Models
             this.prix = prix;
             this.dateEnreg = dateEnreg;
             this.owenerCin = owenerCin;
+            this.status = status;
         }
     }
 }

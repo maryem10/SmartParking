@@ -117,65 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icons8-motorcycle-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-motorcycle-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Parking-pana (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Parking-pana (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="parking (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\parking (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-motorcycle-961" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-motorcycle-961.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-bicycle-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-bicycle-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Parking-pana (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Parking-pana (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Parking-pana" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Parking-pana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-parking-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-parking-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="54068" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\54068.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-parking-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-parking-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="parking (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\parking (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="group" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="54474" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\54474.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="spaces (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spaces (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-delivery-truck-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-delivery-truck-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="spaces" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spaces.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-automobile-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-automobile-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-parking-close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-parking-close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tickets" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tickets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tickets1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tickets1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox_Ajouter.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABGdBTUEAALGPC/xhBQAAAu1JREFUeF7t
+        28lqVGEUBODsnIeNCJpJjebxooIIDgvBhSKa7oALV75PDG40cUjAR1BBl+F4fi1IvClPrPQNmnR9UAS1
+        6167kKaF/06YmZmZmdnhN/ksjs2+jKP4pfVpdjHOzgzj4fQgPmUC2cg8uPwozuBlNopLg5jvDNzNxsWn
+        cQ0vt7049zxO5pDrnWF3JP+1fzj/JE6gZqoc8XZ31D9lZhC3UDNVDvi6O2iRFdRMleN974xZ5RtqpiJj
+        lkHNVGzMKqiZio1ZBTVTsTGroGYqNmYV1EzFxqyCmqnYmFVQMxUbswpqpmJjVkHNVGzMKqiZio1ZBTVT
+        sTGroGYqNmYV1EzFxqyCmqnYmFVQMxUbswpqpmJjVkHNVGzMKqiZio1ZBTVTsTGroGYqNmYV1EzFxqyC
+        mqnYmFVQMxUbswpqB1873za1GDfzTa1kvm5/k2ORYXzJnytTg7ixb2f92onNvMnabzce76xOPos5zNMP
+        nOr0yJ20U6y9ns/OC95nN3J+nmK9h5lGlxdsp+vpjZxYx0yjmVuKI3mxzc7Fna1sto0w19556F3Tz9BN
+        XmzXxxvGOP18dDTtA5/cwMnkd+o7mGl0+Hq32r2JE+/zY+M0ZupH+3KeF/bYW3kztRRXME+/LryI49OL
+        cT1v8gr/HWV/gcObX+95OX8utC0wy8G3443uEtRMxcasgpqp2JhVUDMVG7MKaqZiY1ZBzVRszCqomYqN
+        WQU1U7Exq6BmKjZmFdRMxcasgpqp2JhVUDMVG7MKaqZiY1ZBzVRszCqomYqNWQU1U7Exq6BmKjZmFdRM
+        xcasgpqp2JhVUDMVG7MKaqZiY1ZBzVRszCqomYqNWQU1U7Exq6BmKvGQzmfUTJXjtYeS2Kgsy6iZCk+A
+        sVF3ZhgLqJmqPWKWI/7Nwcq3h+os3L8wOYyrOeS7zrDbs7ZvpzrHzfzjOJUfI3dz1PbkQXvMo+Vj+732
+        Z3iZ9ak9L9LbMyNmZmZmZvYfm5j4AQHVMp3hknedAAAAAElFTkSuQmCC
+</value>
   </data>
 </root>

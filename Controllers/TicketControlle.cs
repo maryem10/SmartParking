@@ -15,13 +15,29 @@ namespace SmartParking.Controllers
 
     internal class TicketControlle
     {
-        public static MySqlConnection cnn = Program.GetConnection();
+        public static MySqlConnection GetConnection()
+        {
+            string sql = "datasource=localhost;port=3306;username=root;password=;database=smartparking";
+            MySqlConnection cnn = new MySqlConnection(sql);
+
+            try
+            {
+                cnn.Open();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Can not open connection ! \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return cnn;
+
+        }
+
         public static void AjouterTicket(Ticket reservation)
         {
 
 
             string sql = "INSERT INTO ticket VALUES (@id, @idRes,@idUser, @dateEmp, @total)";
-
+            MySqlConnection cnn = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, cnn);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = reservation.Id;
@@ -48,7 +64,7 @@ namespace SmartParking.Controllers
         {
 
             string sql = "UPDATE ticket SET  idRes=@idRes,idUser=@idUser,total= @totalwhere id= @id";
-
+            MySqlConnection cnn = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, cnn);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
@@ -73,7 +89,7 @@ namespace SmartParking.Controllers
         public static void SupprimerTicket(string idC)
         {
             string sql = "DELETE FROM ticket WHERE id = @id ";
-
+            MySqlConnection cnn = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, cnn);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = idC; ;
@@ -93,5 +109,17 @@ namespace SmartParking.Controllers
             cnn.Close();
         }
 
+        internal static object LoadData()
+        {
+            MySqlConnection cnn = GetConnection();
+         
+            string loadData = "select * from ticket";
+            MySqlCommand cmd = new MySqlCommand(loadData, cnn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+            cnn.Close();
+            return dt;
+        }
     }
 }

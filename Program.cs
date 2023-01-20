@@ -1,4 +1,6 @@
 ﻿using MySqlConnector;
+using SmartParking.Views;
+using SmartParking.Views.UserController;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -22,8 +24,9 @@ namespace SmartParking
             Application.Run(new authentification());
 
         }
-        //public static MySqlConnection cnx = new MySqlConnection("SERVER=127.0.0.1; DATABASE=smartparking; UID=root; PASSWORD= ;  pooling = false; convert zero datetime=True");
-        public static MySqlConnection GetConnection()
+
+
+        public static MySqlConnection GetConnection1()
         {
             string sql = "datasource=localhost;port=3306;username=root;password=;database=smartparking";
             MySqlConnection cnn = new MySqlConnection(sql);
@@ -38,6 +41,7 @@ namespace SmartParking
             }
             return cnn;
         }
-
+        //public static MySqlConnection cnx = new MySqlConnection("SERVER=127.0.0.1; DATABASE=smartparking; UID=root; PASSWORD= ;  pooling = false; convert zero datetime=True");
+        //   public static MySqlConnection cnn = new MySqlConnection("SERVER=127.0.0.1; DATABASE=bibliothèque; UID=root; PASSWORD= ;  pooling = false; convert zero datetime=True");
     }
 }
